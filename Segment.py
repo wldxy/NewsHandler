@@ -9,7 +9,7 @@ def segment(docs, dicname="dict.txt", vecname="vec.txt"):
     tokens = list()
     punc = string.punctuation
     for doc in docs:
-        tokens.append(nltk.word_tokenize(doc))
+        tokens.append(nltk.word_tokenize(doc.lower()))
     frequency = collections.defaultdict(int)
     for token in tokens:
         for word in token:
